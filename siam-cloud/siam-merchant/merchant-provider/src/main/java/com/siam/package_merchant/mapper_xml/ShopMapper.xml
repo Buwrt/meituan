@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.siam.package_merchant.mapper.ShopMapper" >
+  <!-- 业务逻辑部分 -->
+  <select id="selectByDistance" resultMap="BaseResultMap" parameterType="com.siam.package_merchant.entity.Shop">
+    select
+      *
+    from
+      (select
+        *,
+        round(
+          6378.138 * 2 * asin(
+            sqrt(
+              pow(
+                sin(
+                  (
+                    #{paramCondition.positionLatitude} * pi() / 180 - latitude * pi() / 180
+                  ) / 2
+                ),
+                2
+              ) + cos(#{paramCondition.positionLatitude} * pi() / 180) * cos(latitude * pi() / 180) * pow(
+                sin(
+                  (
+                    #{paramCondition.positionLongitude} * pi() / 180 - longitude * pi() / 180
+                  ) / 2
+                ),
+                2
+              )
+            )
+          ) * 1000
+        ) as distance
+      from
+        tb_shop) as t
+    where status = 2 and distance &lt;= #{paramCondition.deliveryDistanceLimit}
+    order by distance asc
+  </select>
+
+  <select id="selectMapByDistance" resultMap="CustomResultMap" parameterType="com.siam.package_merchant.entity.Shop">
+    select
+      *
+    from
+      (select
+        *,
+        round(
+          6378.138 * 2 * asin(
+            sqrt(
+              pow(
+                sin(
+                  (
+                    #{paramCondition.positionLatitude} * pi() / 180 - latitude * pi() / 180
+                  ) / 2
+                ),
+                2
+              ) + cos(#{paramCondition.positionLatitude} * pi() / 180) * cos(latitude * pi() / 180) * pow(
+                sin(
+                  (
+                    #{paramCondition.positionLongitude} * pi() / 180 - longitude * pi() / 180
+                  ) / 2
+                ),
+                2
+              )
+            )
+          ) * 1000
+        ) as distance
+      from
+        tb_shop) as t
+    where status = 2 and distance &lt;= #{paramCondition.deliveryDistanceLimit}
+    order by distance asc
+  </select>
+
+  <resultMap id="BaseResultMap" type="com.siam.package_merchant.entity.Shop" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="merchant_id" property="merchantId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="street" property="street" jdbcType="VARCHAR" />
+    <result column="is_operating" property="isOperating" jdbcType="BIT" />
+    <result column="start_time" property="startTime" jdbcType="VARCHAR" />
+    <result column="end_time" property="endTime" jdbcType="VARCHAR" />
+    <result column="manage_primary" property="managePrimary" jdbcType="VARCHAR" />
+    <result column="manage_minor" property="manageMinor" jdbcType="VARCHAR" />
+    <result column="shop_img" property="shopImg" jdbcType="VARCHAR" />
+    <result column="shop_within_img" property="shopWithinImg" jdbcType="VARCHAR" />
+    <result column="shop_logo_img" property="shopLogoImg" jdbcType="VARCHAR" />
+    <result column="certificate_type1" property="certificateType1" jdbcType="VARCHAR" />
+    <result column="certificate_img1" property="certificateImg1" jdbcType="VARCHAR" />
+    <result column="certificate_type2" property="certificateType2" jdbcType="VARCHAR" />
+    <result column="certificate_img2" property="certificateImg2" jdbcType="VARCHAR" />
+    <result column="special_type" property="specialType" jdbcType="VARCHAR" />
+    <result column="special_img" property="specialImg" jdbcType="VARCHAR" />
+    <result column="audit_status" property="auditStatus" jdbcType="INTEGER" />
+    <result column="audit_reason" property="auditReason" jdbcType="VARCHAR" />
+    <result column="audit_time" property="auditTime" jdbcType="TIMESTAMP" />
+    <result column="take_out_phone" property="takeOutPhone" jdbcType="VARCHAR" />
+    <result column="contact_realname" property="contactRealname" jdbcType="VARCHAR" />
+    <result column="contact_phone" property="contactPhone" jdbcType="VARCHAR" />
+    <result column="announcement" property="announcement" jdbcType="VARCHAR" />
+    <result column="brief_introduction" property="briefIntroduction" jdbcType="VARCHAR" />
+    <result column="start_delivery_price" property="startDeliveryPrice" jdbcType="DECIMAL" />
+    <result column="delivery_starting_price" property="deliveryStartingPrice" jdbcType="DECIMAL" />
+    <result column="delivery_kilometer_price" property="deliveryKilometerPrice" jdbcType="DECIMAL" />
+    <result column="delivery_distance_limit" property="deliveryDistanceLimit" jdbcType="DECIMAL" />
+    <result column="service_rating" property="serviceRating" jdbcType="DECIMAL" />
+    <result column="business_license" property="businessLicense" jdbcType="VARCHAR" />
+    <result column="id_card_front_side" property="idCardFrontSide" jdbcType="VARCHAR" />
+    <result column="id_card_back_side" property="idCardBackSide" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="reduced_delivery_price" property="reducedDeliveryPrice" jdbcType="DECIMAL" />
+    <result column="is_open_order_audio" property="isOpenOrderAudio" jdbcType="BIT" />
+    <result column="is_open_local_print" property="isOpenLocalPrint" jdbcType="BIT" />
+    <result column="is_open_cloud_print" property="isOpenCloudPrint" jdbcType="BIT" />
+    <result column="first_poster" property="firstPoster" jdbcType="VARCHAR" />
+    <result column="house_number" property="houseNumber" jdbcType="VARCHAR" />
+    <result column="longitude" property="longitude" jdbcType="DECIMAL" />
+    <result column="latitude" property="latitude" jdbcType="DECIMAL" />
+    <result column="kitchen_total_order_printer_id" property="kitchenTotalOrderPrinterId" jdbcType="INTEGER" />
+    <result column="checkout_printer_id" property="checkoutPrinterId" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="CustomResultMap" type="java.util.Map" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="merchant_id" property="merchantId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="street" property="street" jdbcType="VARCHAR" />
+    <result column="is_operating" property="isOperating" jdbcType="BIT" />
+    <result column="start_time" property="startTime" jdbcType="VARCHAR" />
+    <result column="end_time" property="endTime" jdbcType="VARCHAR" />
+    <result column="manage_primary" property="managePrimary" jdbcType="VARCHAR" />
+    <result column="manage_minor" property="manageMinor" jdbcType="VARCHAR" />
+    <result column="shop_img" property="shopImg" jdbcType="VARCHAR" />
+    <result column="shop_within_img" property="shopWithinImg" jdbcType="VARCHAR" />
+    <result column="shop_logo_img" property="shopLogoImg" jdbcType="VARCHAR" />
+    <result column="certificate_type1" property="certificateType1" jdbcType="VARCHAR" />
+    <result column="certificate_img1" property="certificateImg1" jdbcType="VARCHAR" />
+    <result column="certificate_type2" property="certificateType2" jdbcType="VARCHAR" />
+    <result column="certificate_img2" property="certificateImg2" jdbcType="VARCHAR" />
+    <result column="special_type" property="specialType" jdbcType="VARCHAR" />
+    <result column="special_img" property="specialImg" jdbcType="VARCHAR" />
+    <result column="audit_status" property="auditStatus" jdbcType="INTEGER" />
+    <result column="audit_reason" property="auditReason" jdbcType="VARCHAR" />
+    <result column="audit_time" property="auditTime" jdbcType="TIMESTAMP" />
+    <result column="take_out_phone" property="takeOutPhone" jdbcType="VARCHAR" />
+    <result column="contact_realname" property="contactRealname" jdbcType="VARCHAR" />
+    <result column="contact_phone" property="contactPhone" jdbcType="VARCHAR" />
+    <result column="announcement" property="announcement" jdbcType="VARCHAR" />
+    <result column="brief_introduction" property="briefIntroduction" jdbcType="VARCHAR" />
+    <result column="start_delivery_price" property="startDeliveryPrice" jdbcType="DECIMAL" />
+    <result column="delivery_starting_price" property="deliveryStartingPrice" jdbcType="DECIMAL" />
+    <result column="delivery_kilometer_price" property="deliveryKilometerPrice" jdbcType="DECIMAL" />
+    <result column="delivery_distance_limit" property="deliveryDistanceLimit" jdbcType="DECIMAL" />
+    <result column="service_rating" property="serviceRating" jdbcType="DECIMAL" />
+    <result column="business_license" property="businessLicense" jdbcType="VARCHAR" />
+    <result column="id_card_front_side" property="idCardFrontSide" jdbcType="VARCHAR" />
+    <result column="id_card_back_side" property="idCardBackSide" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="reduced_delivery_price" property="reducedDeliveryPrice" jdbcType="DECIMAL" />
+    <result column="is_open_order_audio" property="isOpenOrderAudio" jdbcType="BIT" />
+    <result column="is_open_local_print" property="isOpenLocalPrint" jdbcType="BIT" />
+    <result column="is_open_cloud_print" property="isOpenCloudPrint" jdbcType="BIT" />
+    <result column="first_poster" property="firstPoster" jdbcType="VARCHAR" />
+    <result column="house_number" property="houseNumber" jdbcType="VARCHAR" />
+    <result column="longitude" property="longitude" jdbcType="DECIMAL" />
+    <result column="latitude" property="latitude" jdbcType="DECIMAL" />
+    <result column="kitchen_total_order_printer_id" property="kitchenTotalOrderPrinterId" jdbcType="INTEGER" />
+    <result column="checkout_printer_id" property="checkoutPrinterId" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>
