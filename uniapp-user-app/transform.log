@@ -1,0 +1,58 @@
+开始转换……
+小程序路径:  /data/workspace/mp-src
+搜索到438个文件(含目录)，耗时：7605ms
+
+开始分析文件
+分析文件信息完成，共88组数据
+开始转换文件组为vue文件
+
+[ERROR]这个页面的js的结构写法无法解析(可能有语法问题)，请修复后再试。   fileKey: base/CustomPage
+properties _showChange函数不存在
+properties _showChange函数不存在
+
+[Tip]这里引用的全是网络字体，可能在app上面有兼容问题（如字体图标显示不出来，运行后没问题就不用管）  fileKey: components/iconfont
+[ERROR]prop pwdVal 的默认值  与类型 Number 不一致。    fileKey: components/pay-password/pay-password
+
+[Tip] 检测到组件picker的mode为 region ，在App和H5里未实现，已使用组件region-picker进行替换。
+                    虽然已替换，但仍需注意picker在<form/>组件里面的取值问题(可能在formSubmit拿不address，需手动调整)。
+                    详情请参阅相关文档, file: pages/address/replace/replace
+
+[Tip] 检测到组件picker的mode为 region ，在App和H5里未实现，已使用组件region-picker进行替换。
+                    虽然已替换，但仍需注意picker在<form/>组件里面的取值问题(可能在formSubmit拿不address，需手动调整)。
+                    详情请参阅相关文档, file: pages/address/search/search
+[WARN] 文件 pages/assets/logo/logo.jpg 不存在，但仍然对路径进行转换为相对于static目录，运行时需注意！   fileKey: pages/internal/login/authorization/authorization
+开始二次遍历及生成vue文件
+write pages.json success!
+write manifest.json success!
+write main.js success!
+write package.json success!
+
+
+统计信息：
+
+Component数量: 15
+Page数量: 48
+支付api数量: 6
+登录api数量: 4
+chooseMedia数量: 0
+getLocation数量: 1
+getRelationNodes数量: 1
+<ad/>数量: 0
+<map/>数量: 0
+<video/>数量: 0
+Vant组件: ， 数量：0
+
+项目转换完成！
+用时: 174.784s
+工具版本：v2.2.6
+在该小程序项目的同级目录可以看到_uni结尾的项目，即是转换好的uniapp项目，相关日志在该目录里。
+
+！！！ 当前项目引用了npm模块，请转换完后，在命令行里运行“npm install”命令安装npm模块 ！！！
+
+使用说明：
+    1.因各种原因，本工具并非100%完美转换！部分语法仍需人工处理！
+    2.工具转换原理及说明文档参考：https://l4rz4zwpx7.k.topthink.com/@kmrvzg72lx/
+    3.如遇运行报错，请添加QQ群(五群：536178289)带图反馈或https://github.com/zhangdaren/miniprogram-to-uniapp提交Issue！
+    4.转换后请查阅_uni目录或_uni-cli目录里的 README.md 和 transform.log
+
+

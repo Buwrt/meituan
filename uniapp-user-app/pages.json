@@ -1,0 +1,511 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"usingComponents": {
+					"mp-dialog": "../../components/dialog/dialog",
+					"is-show-tip": "../../components/is-show-tip/is-show-tip",
+					"mp-halfScreenDialog": "../../components/half-screen-dialog/half-screen-dialog"
+				},
+				"navigationBarTitleText": "暹罗外卖",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/order/index/index",
+			"style": {
+				"usingComponents": {
+					"mp-searchbar": "../../../components/searchbar/searchbar",
+					"mp-badge": "../../../components/badge/badge",
+					"is-show-tip": "../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "订单",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/order/detail/detail",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../components/half-screen-dialog/half-screen-dialog",
+					"mp-dialog": "../../../components/dialog/dialog",
+					"mp-actionSheet": "../../../components/actionsheet/actionsheet"
+				},
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+		{
+			"path": "pages/order/evaluate/evaluate",
+			"style": {
+				"usingComponents": {
+					"multiple-rate": "/components/multiple-rate/multiple-rate"
+				},
+				"navigationBarTitleText": "评价"
+			}
+		},
+		{
+			"path": "pages/order/refund/apply/apply",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../../components/half-screen-dialog/half-screen-dialog"
+				},
+				"navigationBarTitleText": "申请退款"
+			}
+		},
+		{
+			"path": "pages/order/refund/progress/progress",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "退款进度"
+			}
+		},
+		{
+			"path": "pages/mine/index/index",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/userinfo/userinfo",
+			"style": {
+				"usingComponents": {
+					"mp-dialog": "../../../components/dialog/dialog"
+				},
+				"navigationBarTitleText": "个人资料"
+			}
+		},
+		{
+			"path": "pages/mine/coupons/coupons",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "我的优惠券"
+			}
+		},
+		{
+			"path": "pages/mine/integral/integral",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../components/half-screen-dialog/half-screen-dialog",
+					"is-show-tip": "../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "我的积分",
+				"navigationBarBackgroundColor": "#004ca0",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/mine/balance/index/index",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../../components/half-screen-dialog/half-screen-dialog",
+					"is-show-tip": "../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "我的余额",
+				"navigationBarBackgroundColor": "#004ca0",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/mine/member/index/index",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "会员中心",
+				"navigationBarBackgroundColor": "#11110f",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/mine/member/recharge/recharge",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "会员充值"
+			}
+		},
+		{
+			"path": "pages/mine/member/record/record",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "充值记录"
+			}
+		},
+		{
+			"path": "pages/mine/member/detail/detail",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "账单详情"
+			}
+		},
+		{
+			"path": "pages/mine/share/index/index",
+			"style": {
+				"usingComponents": {
+					"mp-dialog": "../../../../components/dialog/dialog",
+					"mp-halfScreenDialog": "../../../../components/half-screen-dialog/half-screen-dialog"
+				},
+				"navigationBarTitleText": "全民参与 · 邀请好友",
+				"navigationBarBackgroundColor": "#feefd0"
+			}
+		},
+		{
+			"path": "pages/mine/share/reward/reward",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../../components/half-screen-dialog/half-screen-dialog",
+					"is-show-tip": "../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "我的奖励",
+				"navigationBarBackgroundColor": "#004ca0",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/menu/index/index",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../components/is-show-tip/is-show-tip",
+					"mp-dialog": "../../../components/dialog/dialog",
+					"mp-halfScreenDialog": "../../../components/half-screen-dialog/half-screen-dialog",
+					"mp-vtabs": "../../../components/vtabs/index",
+					"mp-vtabs-content": "../../../components/vtabs-content/index",
+					"multiple-rate": "../../../components/multiple-rate/multiple-rate",
+					"mp-select-text": "../../../components/select-text/index"
+				},
+				"navigationBarTitleText": "菜单"
+			}
+		},
+		{
+			"path": "pages/menu/detail/detail",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../components/half-screen-dialog/half-screen-dialog"
+				},
+				"navigationBarTitleText": "商品详情"
+			}
+		},
+		{
+			"path": "pages/menu/pay/pay",
+			"style": {
+				"usingComponents": {
+					"mp-actionSheet": "../../../components/actionsheet/actionsheet",
+					"mp-halfScreenDialog": "../../../components/half-screen-dialog/half-screen-dialog",
+					"mp-dialog": "../../../components/dialog/dialog"
+				},
+				"navigationBarTitleText": "确认订单"
+			}
+		},
+		{
+			"path": "pages/menu/search/search",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../components/is-show-tip/is-show-tip",
+					"mp-halfScreenDialog": "../../../components/half-screen-dialog/half-screen-dialog"
+				},
+				"navigationBarBackgroundColor": "#004ca0",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/address/index/index",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "收货地址",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/address/choose/choose",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "配送方式"
+			}
+		},
+		{
+			"path": "pages/address/insert/insert",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "添加地址"
+			}
+		},
+		{
+			"path": "pages/address/edit/edit",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "修改地址"
+			}
+		},
+		{
+			"path": "pages/address/replace/replace",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "选择地址"
+			}
+		},
+		{
+			"path": "pages/address/search/search",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "选择地址"
+			}
+		},
+		{
+			"path": "pages/internal/login/authorization/authorization",
+			"style": {
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/logs/logs",
+			"style": {
+				"navigationBarTitleText": "查看启动日志",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/mine/share/withdrawal/index/index",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../../../components/half-screen-dialog/half-screen-dialog"
+				},
+				"navigationBarTitleText": "奖励提现"
+			}
+		},
+		{
+			"path": "pages/mine/share/withdrawal/detail/detail",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "提现记录"
+			}
+		},
+		{
+			"path": "pages/mine/security/index/index",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "账号安全"
+			}
+		},
+		{
+			"path": "pages/mine/security/reset/reset",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "设置密码"
+			}
+		},
+		{
+			"path": "pages/mine/security/verify/verify",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "重置密码"
+			}
+		},
+		{
+			"path": "components/pay-password/pay-password",
+			"style": {
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/internal/mall/index/index",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../../components/half-screen-dialog/half-screen-dialog",
+					"mp-badge": "../../../../components/badge/badge",
+					"is-show-tip": "../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "积分商城",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/internal/mall/menu/menu",
+			"style": {
+				"usingComponents": {
+					"mp-vtabs": "../../../../components/vtabs/index",
+					"mp-vtabs-content": "../../../../components/vtabs-content/index",
+					"mp-halfScreenDialog": "../../../../components/half-screen-dialog/half-screen-dialog",
+					"is-show-tip": "../../../../components/is-show-tip/is-show-tip"
+				}
+			}
+		},
+		{
+			"path": "pages/internal/mall/car/car",
+			"style": {
+				"usingComponents": {
+					"mp-slideview": "../../../../components/slideview/slideview",
+					"is-show-tip": "../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "购物车",
+				"disableScroll": true
+			}
+		},
+		{
+			"path": "pages/internal/mall/detail/detail",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../../components/half-screen-dialog/half-screen-dialog",
+					"mp-badge": "../../../../components/badge/badge",
+					"is-show-tip": "../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "商品详情"
+			}
+		},
+		{
+			"path": "pages/internal/mall/pay/pay",
+			"style": {
+				"usingComponents": {
+					"mp-actionSheet": "../../../../components/actionsheet/actionsheet",
+					"mp-halfScreenDialog": "../../../../components/half-screen-dialog/half-screen-dialog",
+					"mp-dialog": "../../../../components/dialog/dialog"
+				},
+				"navigationBarTitleText": "确认订单"
+			}
+		},
+		{
+			"path": "pages/internal/mall/order/detail/detail",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../../../components/half-screen-dialog/half-screen-dialog",
+					"mp-dialog": "../../../../../components/dialog/dialog",
+					"mp-actionSheet": "../../../../../components/actionsheet/actionsheet"
+				},
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+		{
+			"path": "pages/internal/mall/order/refund/apply/apply",
+			"style": {
+				"usingComponents": {
+					"mp-halfScreenDialog": "../../../../../../components/half-screen-dialog/half-screen-dialog"
+				},
+				"navigationBarTitleText": "申请退款"
+			}
+		},
+		{
+			"path": "pages/internal/mall/order/refund/progress/progress",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "退款进度"
+			}
+		},
+		{
+			"path": "pages/internal/mall/order/logistics/logistics",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "查看物流"
+			}
+		},
+		{
+			"path": "pages/mine/unreceived/integral/list/list",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "未到账积分"
+			}
+		},
+		{
+			"path": "pages/mine/collect/index/index",
+			"style": {
+				"usingComponents": {
+					"mp-searchbar": "../../../../components/searchbar/searchbar",
+					"mp-slideview": "../../../../components/slideview/slideview",
+					"is-show-tip": "../../../../components/is-show-tip/is-show-tip"
+				}
+			}
+		},
+		{
+			"path": "pages/mine/unreceived/reward/list/list",
+			"style": {
+				"usingComponents": {
+					"is-show-tip": "../../../../../components/is-show-tip/is-show-tip"
+				},
+				"navigationBarTitleText": "未到账余额"
+			}
+		},
+		{
+			"path": "pages/login/code/code",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "账户登录"
+			}
+		},
+		{
+			"path": "pages/login/choose/choose",
+			"style": {
+				"usingComponents": {},
+				"navigationBarTitleText": "账户登录"
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#bebebe",
+		"selectedColor": "#004ca0",
+		"borderStyle": "white",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "外卖",
+				"iconPath": "static/assets/tabbar/Icon/index.png",
+				"selectedIconPath": "static/assets/tabbar/SelectedIcon/blue/index.png"
+			},
+			{
+				"pagePath": "pages/internal/mall/index/index",
+				"text": "商城",
+				"iconPath": "static/assets/tabbar/Icon/store.png",
+				"selectedIconPath": "static/assets/tabbar/SelectedIcon/blue/store.png"
+			},
+			{
+				"pagePath": "pages/internal/mall/car/car",
+				"text": "购物车",
+				"iconPath": "static/assets/tabbar/Icon/car.png",
+				"selectedIconPath": "static/assets/tabbar/SelectedIcon/blue/car.png"
+			},
+			{
+				"pagePath": "pages/mine/index/index",
+				"text": "我的",
+				"iconPath": "static/assets/tabbar/Icon/mine.png",
+				"selectedIconPath": "static/assets/tabbar/SelectedIcon/blue/mine.png"
+			}
+		]
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json",
+	"plugins": {
+		"chooseLocation": {
+			"version": "1.0.0",
+			"provider": "wx63ffb7b7894e99ae"
+		}
+	},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序位置功能"
+		}
+	},
+	"globalStyle": {
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "暹罗外卖",
+		"navigationBarTextStyle": "black"
+	},
+	"subPackages": []
+}

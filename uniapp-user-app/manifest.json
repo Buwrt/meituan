@@ -1,0 +1,125 @@
+{
+	"name": "暹罗外卖",
+	"appid": "",
+	"description": "暹罗外卖用户端 App（由微信小程序 wxapplet-siam-user 通过 miniprogram-to-uniapp 转换而来）",
+	"versionName": "1.0.0",
+	"versionCode": "100",
+	"transformPx": false,
+	"app-plus": {
+		"usingComponents": true,
+		"nvueStyleCompiler": "uni-app",
+		"compilerVersion": 3,
+		"splashscreen": {
+			"alwaysShowBeforeRender": true,
+			"waiting": true,
+			"autoclose": true,
+			"delay": 0
+		},
+		"modules": {
+			"Geolocation": {},
+			"Maps": {},
+			"OAuth": {},
+			"Payment": {},
+			"Push": {},
+			"Share": {},
+			"VideoPlayer": {},
+			"Statistic": {}
+		},
+		"distribute": {
+			"android": {
+				"minSdkVersion": 21,
+				"abiFilters": [
+					"armeabi-v7a",
+					"arm64-v8a"
+				],
+				"permissions": [
+					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.INTERNET\"/>",
+					"<uses-permission android:name=\"android.permission.CAMERA\"/>",
+					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+					"<uses-feature android:name=\"android.hardware.camera\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+					"<uses-permission android:name=\"android.permission.REQUEST_INSTALL_PACKAGES\"/>"
+				]
+			},
+			"ios": {},
+			"sdkConfigs": {
+				"maps": {
+					"amap": {
+						"appkey_android": "在此填写高德地图 Android Key",
+						"appkey_ios": "在此填写高德地图 iOS Key"
+					}
+				},
+				"oauth": {
+					"weixin": {
+						"appid": "在此填写微信开放平台 AppID",
+						"appsecret": "在此填写微信开放平台 AppSecret"
+					}
+				},
+				"payment": {
+					"weixin": {
+						"appid": "在此填写微信开放平台 AppID",
+						"appsecret": "在此填写微信开放平台 AppSecret"
+					}
+				},
+				"push": {
+					"unipush": {
+						"enable": false
+					}
+				},
+				"share": {
+					"weixin": {
+						"appid": "在此填写微信开放平台 AppID",
+						"appsecret": "在此填写微信开放平台 AppSecret"
+					}
+				}
+			}
+		}
+	},
+	"quickapp": {},
+	"mp-weixin": {
+		"appid": "wxe3d5f0dc95fac00e",
+		"setting": {
+			"urlCheck": false
+		},
+		"usingComponents": true,
+		"permission": {
+			"scope.userLocation": {
+				"desc": "你的位置信息将用于小程序位置功能"
+			}
+		},
+		"plugins": {
+			"chooseLocation": {
+				"version": "1.0.0",
+				"provider": "wx63ffb7b7894e99ae"
+			}
+		}
+	},
+	"mp-alipay": {
+		"usingComponents": true
+	},
+	"mp-baidu": {
+		"usingComponents": true
+	},
+	"mp-toutiao": {
+		"usingComponents": true
+	},
+	"uniStatistics": {
+		"enable": false
+	},
+	"vueVersion": "2"
+}
